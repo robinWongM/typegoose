@@ -153,7 +153,7 @@ const baseProp = (rawOptions: any, Type: any, target: any, key: any, isArray = f
 
   const instance = new Type();
   const subSchema = schema[instance.constructor.name];
-  console.log(subSchema, Type, isPrimitive(Type), isObject(Type));
+
   if (!subSchema && !isPrimitive(Type) && !isObject(Type)) {
     throw new InvalidPropError(Type.name, key);
   }
