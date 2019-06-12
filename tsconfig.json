@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["esnext"],
+    "lib": [
+      "esnext"
+    ],
+    "types": [
+      "node"
+    ],
     "module": "commonjs",
     "declaration": true,
     "experimentalDecorators": true,
@@ -10,5 +15,7 @@
     "outDir": "lib",
     "inlineSourceMap": true
   },
-  "include": ["src/**/*.ts"]
+  "include": [
+    "src/**/*.ts"
+  ]
 }

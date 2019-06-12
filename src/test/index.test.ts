@@ -1,5 +1,6 @@
 import { expect } from 'chai';
 import * as mongoose from 'mongoose';
+import 'mocha';
 
 import { model as User, User as UserType } from './models/user';
 import { model as Car, Car as CarType } from './models/car';
@@ -29,7 +30,7 @@ describe('Typegoose', () => {
       price: mongoose.Types.Decimal128.fromString('28189.25'),
     }, {
       model: 'Zastava',
-        price: mongoose.Types.Decimal128.fromString('1234.25'),
+      price: mongoose.Types.Decimal128.fromString('1234.25'),
     }]);
 
     const user = await User.create({
@@ -169,7 +170,7 @@ describe('Typegoose', () => {
 
     expect(savedUser.languages).to.include('Hungarian');
     expect(savedUser.previousJobs.length).to.be.above(0);
-     savedUser.previousJobs.map((prevJob) => {
+    savedUser.previousJobs.map((prevJob) => {
       expect(prevJob.startedAt).to.be.ok;
     });
   });
@@ -288,7 +289,7 @@ describe('getClassForDocument()', () => {
   it('Should validate email', async () => {
     try {
       await Person.create({
-          email: 'email',
+        email: 'email',
       });
       fail('Validation must fail.');
     } catch (e) {

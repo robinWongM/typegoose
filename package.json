@@ -1,5 +1,5 @@
 {
-  "name": "typegoose",
+  "name": "@robinwongm/typegoose",
   "version": "5.6.0",
   "description": "Define Mongoose models using TypeScript classes.",
   "main": "lib/typegoose.js",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/szokodiakos/typegoose.git"
+    "url": "https://github.com/robinWongM/typegoose.git"
   },
   "types": "lib/typegoose.d.ts",
   "typings": "lib/typegoose.d.ts",
@@ -29,9 +29,9 @@
   "devDependencies": {
     "@types/chai": "4.1.3",
     "@types/dotenv": "4.0.3",
-    "@types/mocha": "5.2.0",
+    "@types/mocha": "^5.2.7",
     "@types/mongoose": "5.0.10",
-    "@types/node": "8.10.0",
+    "@types/node": "^12.0.7",
     "chai": "4.1.2",
     "coveralls": "^3.0.3",
     "dotenv": "5.0.1",

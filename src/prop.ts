@@ -16,9 +16,9 @@ export type Validator =
   | ValidatorFunction
   | RegExp
   | {
-      validator: ValidatorFunction;
-      message?: string;
-    };
+    validator: ValidatorFunction;
+    message?: string;
+  };
 
 export interface BasePropOptions {
   required?: RequiredType;
