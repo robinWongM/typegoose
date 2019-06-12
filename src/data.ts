@@ -2,6 +2,8 @@
 
 export const methods = { staticMethods: {}, instanceMethods: {} };
 export const schema = {};
+export const schemaOptions = {};
+export const schemaGenerated = {};
 export const models = {};
 export const virtuals = {};
 export const hooks = {};

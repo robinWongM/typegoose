@@ -153,6 +153,7 @@ const baseProp = (rawOptions: any, Type: any, target: any, key: any, isArray = f
 
   const instance = new Type();
   const subSchema = schema[instance.constructor.name];
+  console.log(subSchema, Type, isPrimitive(Type), isObject(Type));
   if (!subSchema && !isPrimitive(Type) && !isObject(Type)) {
     throw new InvalidPropError(Type.name, key);
   }
@@ -163,7 +164,9 @@ const baseProp = (rawOptions: any, Type: any, target: any, key: any, isArray = f
       schema[name][key] = {
         ...schema[name][key][0],
         ...options,
-        type: [Type],
+        type: [
+          Type
+        ],
       };
       return;
     }
@@ -190,7 +193,10 @@ const baseProp = (rawOptions: any, Type: any, target: any, key: any, isArray = f
     schema[name][key][0] = {
       ...schema[name][key][0],
       ...options,
-      ...subSchema,
+      subSchema: {
+        type: Type,
+        name: instance.constructor.name,
+      }
     };
     return;
   }
